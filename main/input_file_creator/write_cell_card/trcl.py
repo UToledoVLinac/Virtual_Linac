@@ -7,7 +7,7 @@ __author__ = 'Kanru Xie'
 
 from math import atan, tan, sin, cos
 from itertools import chain
-from input_file_creator.write_cell_card.mlc_open import mlc_open_distance
+from main.input_file_creator.write_cell_card.mlc_open import mlc_open_distance
 
 
 def trcl_y(fs):
@@ -15,10 +15,10 @@ def trcl_y(fs):
     rotation = float(atan(fs / 100) * 360 / 6.282)
     t[1] = 0.001
     # MCNP issue, dy of Y-Jaws can't be 0, have to give them a small value, don't know why...
-    t[7] = ("%0.4f" % rotation)
-    t[8] = ("%0.4f" % (rotation - 90))
-    t[10] = ("%0.4f" % (rotation + 90))
-    t[11] = ("%0.4f" % rotation)
+    t[7] = ("%0.2f" % rotation)
+    t[8] = ("%0.2f" % (rotation - 90))
+    t[10] = ("%0.2f" % (rotation + 90))
+    t[11] = ("%0.2f" % rotation)
     tr = ''
     for i in range(len(t)):
         tr += str(t[i]) + ' '
@@ -28,13 +28,13 @@ def trcl_y(fs):
 def trcl_x(fs):
     t = [0, 0, 0, 0, 90, 90, 90, 0, -90, 90, 90, 0]
     rotation = float(atan(fs / 100) * 360 / 6.282)
-    rotation_rad = float(atan(fs / 200))
-    t[0] = ("%.4f" % (36.61 * (tan(rotation_rad) - sin(rotation_rad))))
-    t[2] = ("%.4f" % (36.61 * (cos(rotation_rad) - 1)))
-    t[3] = ("%.4f" % rotation)
-    t[5] = ("%.4f" % (rotation - 90))
-    t[9] = ("%.4f" % (rotation + 90))
-    t[11] = ("%.4f" % rotation)
+    rotation_rad = float(atan(fs / 100))
+    t[0] = ("%.2f" % (36.61 * (tan(rotation_rad) - sin(rotation_rad))))
+    t[2] = ("%.2f" % (36.61 * (cos(rotation_rad) - 1)))
+    t[3] = ("%.2f" % rotation)
+    t[5] = ("%.2f" % (rotation - 90))
+    t[9] = ("%.2f" % (rotation + 90))
+    t[11] = ("%.2f" % rotation)
     tr = ''
     for i in range(len(t)):
         tr += str(t[i]) + ' '
