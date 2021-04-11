@@ -1,7 +1,12 @@
 # VERSIONS NOTE
 (Version control and management were not done very well since working on full GUI. It's very different now from previous scripts, why not re-number the versions from v1.0.0)
 ***
-### V1.0.0
+#### V1.0.1
+Fixed the calculation mistake in X Jaws trcl card, where we need to use fs / 100 but not / 200. This 
+is a mistake associated with the issue of how to define the Jaws position from input window. 
+Field size calculations were fixed but this one here was forgotten.
+***
+## V1.0.0
 GUI designed and packed with:
 1. Main window
 2. Input File Create window (almost fully functioned)

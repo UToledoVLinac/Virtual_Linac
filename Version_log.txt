@@ -1,4 +1,0 @@
-Before v3.3.0 are programmed as scripts without GUI, refer to those versions log if needed.
-
-V3.4.0
-    Change the angular distribution

@@ -89,7 +89,7 @@ class MainWindow(QMainWindow):
         self.window4.show()
 
     def click_btn5(self):
-        filepath = str(os.getcwd() + '/Instruction_Manual.pdf')
+        filepath = str(os.getcwd() + 'main/Instruction_Manual.pdf')
         webbrowser.open_new(r'file:' + filepath)
 
 
