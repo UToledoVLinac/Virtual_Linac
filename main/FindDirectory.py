@@ -30,3 +30,9 @@ class Finddir(QFileDialog):
         file, _ = QFileDialog.getOpenFileName(self, 'Open file', os.getcwd())
         filename = QFileInfo(file).fileName()
         return filename
+
+    def find_measured_data(self):
+        measured_path = os.getcwd() + '/output_file_analyzer/Measured Data'
+        file, _ = QFileDialog.getOpenFileName(self, 'Open file', measured_path)
+        filepath = QFileInfo(file).filePath()
+        return filepath

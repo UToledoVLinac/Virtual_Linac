@@ -89,8 +89,9 @@ class MainWindow(QMainWindow):
         self.window4.show()
 
     def click_btn5(self):
-        filepath = str(os.getcwd() + 'main/Instruction_Manual.pdf')
-        webbrowser.open_new(r'file:' + filepath)
+        # filepath = str(os.getcwd() + 'main/Instruction_Manual.pdf')
+        # now go to Github
+        webbrowser.open(r'https://github.com/KanruXie/Virtual_Linac')
 
 
 if __name__ == '__main__':

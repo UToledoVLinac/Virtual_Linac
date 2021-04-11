@@ -8,12 +8,12 @@ from PyQt5.QtWidgets import (QCheckBox, QRadioButton, QLabel, QLineEdit, QPushBu
                              QHBoxLayout, QGroupBox, QGridLayout, QWidget, QApplication)
 import os
 import sys
-from output_file_analyzer import read_output_file, diff_calculate
-from FindDirectory import Finddir
+from main.output_file_analyzer import read_output_file, diff_calculate
+from main.FindDirectory import Finddir
 import pyqtgraph as pg
 import pyqtgraph.exporters
 import globalvar as glv
-from output_file_analyzer.output_check import Output_Check
+from main.output_file_analyzer.output_check import Output_Check
 import numpy as np
 
 
@@ -146,7 +146,7 @@ class Output_Window(QWidget):
             self.output_file_line.setText(filepath)
 
     def choose_measured_file(self):
-        filepath = Finddir().find_filepath()
+        filepath = Finddir().find_measured_data()
         if filepath == '':
             pass
         else:

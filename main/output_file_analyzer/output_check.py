@@ -33,7 +33,7 @@ class Output_Check(QMessageBox):
             self.check_dict['measured'] = True
         else:
             try:
-                a = np.loadtxt(self.measured_data)
+                a = np.loadtxt(self.measured_data, delimiter=',')
                 if len(a[0]) == 2:
                     self.check_dict['measured'] = True
                 else:

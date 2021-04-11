@@ -8,10 +8,10 @@ import numpy as np
 import globalvar as glv
 from scipy import interpolate
 
-
+'''
 def pdd_calc():
     measured_data = glv.get_value('Measured data filepath')
-    measured_data_array = np.loadtxt(measured_data)
+    measured_data_array = np.loadtxt(measured_data, delimiter=',')
     x_measured = measured_data_array[:, 0]
     y_measured = measured_data_array[:, 1]
     x_output = glv.get_value('Output X')
@@ -29,6 +29,21 @@ def pdd_calc():
 
     glv.set_value('Measured X', x_new)
     glv.set_value('Measured Y', y_measured_normalize)
+    glv.set_value('Y diff', y_diff)
+'''
+
+
+def pdd_calc():
+    measured_data = glv.get_value('Measured data filepath')
+    measured_data_array = np.loadtxt(measured_data, delimiter=',')
+    x_measured = measured_data_array[:, 0]
+    y_measured = measured_data_array[:, 1]
+    index_max = len(x_measured)
+    x_output = glv.get_value('Output X')
+    y_output = glv.get_value('Output normalized Y')
+    y_diff = (y_measured - y_output[:index_max]) / y_measured
+    glv.set_value('Measured X', x_measured)
+    glv.set_value('Measured Y', y_measured)
     glv.set_value('Y diff', y_diff)
 
 

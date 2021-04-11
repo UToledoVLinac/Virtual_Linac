@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('MCNP-Linac')
         self.statement = QLabel('FOR UNIVERSITY OF TOLEDO MEDICAL PHYSICS RESEARCH ONLY')
         self.version = QLabel('Author: Kanru Xie.' + '\n' +
-                              'Version: 3.3.0 Beta')
+                              'Version: 1.0.1 Beta')
         self.picture = QPixmap('dcc_sunset.png')
         self.piclabel = QLabel()
         self.piclabel.setPixmap(self.picture)
@@ -74,7 +74,9 @@ class MainWindow(QMainWindow):
         self.window3.show()
 
     def click_btn5(self):
-        webbrowser.open_new(r'file:/Users/kanru/Desktop/PyCharm/MILC/Instruction_Manual.pdf')
+        # filepath = str(os.getcwd() + 'main/Instruction_Manual.pdf')
+        # now go to Github
+        webbrowser.open(r'https://github.com/KanruXie/Virtual_Linac')
 
 
 if __name__ == '__main__':
