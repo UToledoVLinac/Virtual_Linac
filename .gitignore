@@ -1,6 +1,15 @@
 # Default ignored files
 # Byte-compiled / optimized / DLL files
 __pycache__/
+.idea/
+main/__pychache__/
+main/beam_commissioning/__pycache__/
+main/beam_commissioning/Commissioned_Beams/__pycache__/
+main/collimator_designing/__pycache__/
+main/input_file_creator/__pycache__/
+main/input_file_creator/write_cell_card/__pycache__/
+main/input_file_creator/write_material_card/__pycache__/
+main/input_file_creator/write_surface_card/__pycache__/
 *.py[cod]
 *$py.class
 
@@ -138,3 +147,8 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# test scripts
+main/test1.py
+main/test2.py
+main/output_file_analyzer/test.py
