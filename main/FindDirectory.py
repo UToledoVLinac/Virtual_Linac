@@ -32,7 +32,13 @@ class Finddir(QFileDialog):
         return filename
 
     def find_measured_data(self):
-        measured_path = os.getcwd() + '/output_file_analyzer/Measured Data'
+        measured_path = os.getcwd() + '/output_file_analyzer/Measured_Data'
+        file, _ = QFileDialog.getOpenFileName(self, 'Open file', measured_path)
+        filepath = QFileInfo(file).filePath()
+        return filepath
+
+    def find_beam_file(self):
+        measured_path = os.getcwd() + '/beam_commissioning/Commissioned_Beams'
         file, _ = QFileDialog.getOpenFileName(self, 'Open file', measured_path)
         filepath = QFileInfo(file).filePath()
         return filepath

@@ -95,7 +95,7 @@ class Commision_Tab(QWidget):
 
     def get_spectrum(self):
         try:
-            f = Finddir().find_filepath()
+            f = Finddir().find_beam_file()
             if f == '':
                 pass
             else:
@@ -105,7 +105,7 @@ class Commision_Tab(QWidget):
 
     def get_angular(self):
         try:
-            f = Finddir().find_filepath()
+            f = Finddir().find_beam_file()
             if f == '':
                 pass
             else:
@@ -115,7 +115,7 @@ class Commision_Tab(QWidget):
 
     def get_spatial(self):
         try:
-            f = Finddir().find_filepath()
+            f = Finddir().find_beam_file()
             if f == '':
                 pass
             else:

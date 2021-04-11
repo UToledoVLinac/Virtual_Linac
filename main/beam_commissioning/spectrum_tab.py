@@ -47,7 +47,7 @@ class Spectrum_Tab(QWidget):
         self.save_layout = QGridLayout()
         self.main_layout = QVBoxLayout()
 
-        self.dir_line.setText(os.getcwd())
+        self.dir_line.setText(os.getcwd() + '/beam_commissioning/Commissioned_Beams')
         self.old_checkbox.setChecked(True)
         self.new_checkbox.setChecked(True)
 
