@@ -23,7 +23,7 @@ def tally_():
         t_card = str('*F8:p (3<3[0:' + str(max_lat) + ' ' +
                      str(center_lat) + ':' + str(center_lat) + ' 0:0])' + '\n' +
                      '*F18:p (3<3[' + str(center_lat) + ':' + str(center_lat) +
-                     ' 0:' + str(int(40 / lat_size - 1)) + ' 0:0])'
+                     ' 0:' + str(max_lat) + ' 0:0])'
                      )
     elif obj == 'detector':
         t_card = str('*F8:p 2')
