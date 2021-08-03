@@ -27,13 +27,15 @@ def mlc_open_leaves():
 
 def mlc_open_distance(leaf_number):  # either half of x- opening (opened), or 0 (closed).
     mlc_x = glv.convert_float('mlc x')
+    # mlc_x is the size of the open field at 100cm ssd
+    # while x_distance is the actual mlc movement in space at 51cm ssd
     x_distance = ''
     mlc_open_leaves()
     if open_r <= (leaf_number % 100) <= open_l:  # 2 banks, leaves numbered as 1xx and 2xx.
         if leaf_number // 100 == 1:  # Bank 1 moves in +x direction
-            x_distance = mlc_x / 2
+            x_distance = mlc_x * 51 / 200
         elif leaf_number // 100 == 2:  # Bank 2 moves in -x direction
-            x_distance = - mlc_x / 2
+            x_distance = - mlc_x * 51 / 200
     else:
         x_distance = 0
         # out of field leaves, closed
