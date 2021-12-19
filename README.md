@@ -66,7 +66,8 @@ scripts were coded initially to help me do the virtual Linac study.
 
 ***
 ## Author & Maintainer
-@KanruXie
+@KanruXie: kanru.xie@yahoo.com
+@UToledoVLinac:UToledo.VLinac@gmail.com
 ***
 ## License
 Apache 2.0
